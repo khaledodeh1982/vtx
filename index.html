@@ -13,6 +13,7 @@
     <a href="#scripts" class="logo">VTX</a>
     <nav>
       <a href="#scripts" data-link="scripts">السكربتات</a>
+      <a href="#codes" data-link="codes">الكودات</a>
       <a href="#admin" data-link="admin">الإدارة</a>
     </nav>
   </header>
@@ -27,6 +28,24 @@
       </div>
       <div id="status" class="status">جاري التحميل…</div>
       <div id="grid" class="grid"></div>
+    </section>
+
+    <!-- الكودات -->
+    <section id="view-codes" class="view" hidden>
+      <div class="card narrow">
+        <h2>الكودات</h2>
+        <p class="muted">حط الكود واستلم السكربت</p>
+        <form id="redeemForm">
+          <input id="redeemInput" type="text" dir="ltr" placeholder="الكود" autocomplete="off" required>
+          <button type="submit" class="btn" id="redeemBtn">استلام السكربت</button>
+          <p id="redeemMsg" class="muted"></p>
+        </form>
+      </div>
+      <div id="redeemResult" class="card" hidden>
+        <h3 id="redeemName" style="margin-top:0"></h3>
+        <pre id="redeemCode" dir="ltr"></pre>
+        <button class="btn" id="redeemCopy">نسخ السكربت</button>
+      </div>
     </section>
 
     <!-- الإدارة -->
@@ -66,6 +85,38 @@
         <div class="card">
           <h2>السكربتات المنشورة</h2>
           <ul id="adminList" class="admin-list"></ul>
+        </div>
+
+        <div class="card">
+          <h2>إضافة كود</h2>
+          <form id="codeForm">
+            <label>الكود (اللي يلصقه المستخدم)
+              <div class="inline">
+                <input id="cCode" type="text" dir="ltr" maxlength="64" required>
+                <button type="button" class="btn ghost small" id="cGen">توليد</button>
+              </div>
+            </label>
+            <label>اسم السكربت المستلم
+              <input id="cName" type="text" maxlength="120" required>
+            </label>
+            <label>السكربت المستلم
+              <textarea id="cScript" rows="8" dir="ltr" spellcheck="false" required></textarea>
+            </label>
+            <label>عدد مرات الاستخدام
+              <select id="cMax">
+                <option value="1">مرة واحدة</option>
+                <option value="2">مرتين</option>
+                <option value="0">للجميع (لا نهائي)</option>
+              </select>
+            </label>
+            <button type="submit" class="btn" id="cSave">إضافة الكود</button>
+            <p id="cMsg" class="muted"></p>
+          </form>
+        </div>
+
+        <div class="card">
+          <h2>الكودات</h2>
+          <ul id="codeList" class="admin-list"></ul>
         </div>
       </div>
     </section>

@@ -19,7 +19,11 @@ main{max-width:1100px;margin:0 auto;padding:24px 16px 60px}
 .hero{text-align:center;margin:20px 0 28px}
 .hero h1{font-size:2.4rem;margin:0}
 .hero p{color:var(--muted);margin:6px 0 18px}
-input,textarea{width:100%;font:inherit;color:var(--text);background:var(--bg2);border:1px solid var(--line);
+.inline{display:flex;gap:8px}
+.badge{font-size:.8rem;padding:2px 8px;border-radius:999px;background:#2e1065;border:1px solid var(--line);color:var(--p3);white-space:nowrap}
+.badge.done{color:var(--err)}
+.admin-list code{direction:ltr;color:var(--p3)}
+input,textarea,select{width:100%;font:inherit;color:var(--text);background:var(--bg2);border:1px solid var(--line);
   border-radius:12px;padding:12px 14px;outline:none}
 input:focus,textarea:focus{border-color:var(--p2);box-shadow:0 0 0 3px rgba(168,85,247,.25)}
 textarea{font-family:ui-monospace,Consolas,monospace;font-size:.9rem;resize:vertical}
